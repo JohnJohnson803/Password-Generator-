@@ -103,5 +103,15 @@ while(is_on == true){
 
 console.log(password.length)
   }}
- return password
+ return (shuffleWord(password))
+}
+
+// Function to shuffle password
+function shuffleWord (word){
+  var shuffledWord = '';
+  word = word.split('');
+  while (word.length > 0) {
+    shuffledWord +=  word.splice(word.length * Math.random() << 0, 1);
+  }
+  return shuffledWord;
 }
